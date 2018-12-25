@@ -1,0 +1,21 @@
+<%= form_for(@design, :html => { :multipart => true }, url: design_create_path) do |f| %>
+    <%= f.label :locallage %>
+    <%= f.file_field :locallage %>
+      
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+      
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+
+   <%= f.fields_for :design_attachments do |p| %>
+     <div class="field">
+       <%= p.label :portfolio %><br>
+       <%= p.file_field :portfolio, :multiple => true, name: "design_attachments[portfolio][]" %>
+     </div>
+   <% end %>
+
+   <div class="actions">
+     <%= f.submit %>
+   </div>
+<% end %>

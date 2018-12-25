@@ -1,0 +1,18 @@
+<a href="../<%= @video.id %>/edit">수정</a>
+<a href="../show/<%= @video.id %>/delete">삭제</a>
+
+<div>
+  <%= @video.content %>
+</div>
+<div>
+  <%= @video.price %>
+</div>
+<div>
+  <img src="<%= @video.locallage.url %>">
+</div>
+<div>
+  <% @video_attachments.each do |p| %>
+    <%= image_tag p.portfolio_url %>
+    <!--<?%= link_to "Edit Attachment", _path(p) %>-->
+  <% end %>
+</div>

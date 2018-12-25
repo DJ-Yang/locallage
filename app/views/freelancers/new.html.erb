@@ -1,0 +1,4 @@
+<%= form_for :category, url: category_path do |f| %>
+    <%= f.select(:category, ['영상', '디자인'], {:class => 'form-control'}) %>
+    <%= f.submit %>
+<% end %>

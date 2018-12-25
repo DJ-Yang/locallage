@@ -1,0 +1,18 @@
+<a href="../<%= @design.id %>/edit">수정</a>
+<a href="../show/<%= @design.id %>/delete">삭제</a>
+
+<div>
+  <%= @design.content %>
+</div>
+<div>
+  <%= @design.price %>
+</div>
+<div>
+  <img src="<%= @design.locallage.url %>">
+</div>
+<div>
+  <% @design_attachments.each do |p| %>
+    <%= image_tag p.portfolio_url %>
+    <!--<?%= link_to "Edit Attachment", _path(p) %>-->
+  <% end %>
+</div>

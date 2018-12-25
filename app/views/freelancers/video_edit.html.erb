@@ -1,0 +1,22 @@
+<%= form_for(@video, :html => { :multipart => true }, url: "/video/show/#{@video.id}/update", method: :patch ) do |f| %>
+
+    <%= f.label :locallage %>
+    <%= f.file_field :locallage %>
+      
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+      
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+
+    <%= f.fields_for :video_attachments do |p| %>
+      <div class="field">
+        <%= p.label :portfolio %><br>
+        <%= p.file_field :portfolio, :multiple => true, name: "video_attachments[portfolio][]" %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

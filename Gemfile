@@ -10,8 +10,9 @@ gem 'figaro'
 # 권한 부여를 위한 젬
 gem 'cancancan'
 gem 'rolify'
-# 로그인 및 권한 시스템
+# 로그인 시스템
 gem 'devise'
+gem 'omniauth-google-oauth2'
 # 이미지 업로드
 gem 'fog-aws'
 gem 'carrierwave'

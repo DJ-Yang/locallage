@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     
+    devise_for :users
     root 'freelancers#index'
 
     #메인페이지
@@ -23,4 +24,11 @@ Rails.application.routes.draw do
     get 'design/:id/edit' => 'freelancers#design_edit'
     patch 'design/show/:id/update' => 'freelancers#design_update'
     get 'design/show/:id/delete' => 'freelancers#design_destroy'
+    
+    #로그인관련
+    get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
+    get 'logout', to: 'sessions#destroy', as: 'logout'
+    get 'auth/:provider/callback', to: 'sessions#create'
+    get 'auth/failure', to: redirect('/')
+    get 'me', to: 'me#show', as: 'me'
 end

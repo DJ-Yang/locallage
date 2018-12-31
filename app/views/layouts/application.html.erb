@@ -14,9 +14,15 @@
     <% if !current_user.nil? %>
       <%=link_to '로그아웃',logout_path%>
       <%= current_user.last_name + current_user.first_name %>
+      <a href='/new'>글쓰기</a>
     <% else %>
       <%=link_to '로그인', new_user_session_path%>
     <% end %>
+    <!-- 메인 메뉴들 정리해둔 것 -->
+    <div>
+      <a href="https://562624bcaee44572aa244db4b49bfa26.vfs.cloud9.us-east-2.amazonaws.com/video">비디오</a>
+      <a href="https://562624bcaee44572aa244db4b49bfa26.vfs.cloud9.us-east-2.amazonaws.com/design">디자인</a>
+    </div>
     <%= yield %>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

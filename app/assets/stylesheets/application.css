@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+ 
+.status {
+   text-align: right;
+ }
+ 
+.input-group {
+   width: 40%;
+ }
+ 
+.search {
+   position: absolute;
+ }
+ 
+.logo input {
+    border: 2px solid;
+    border-color: red;
+}
+
+.logo button {
+  background-color: red;
+  border-color: red;
+}
+#navbarNavAltMarkup {
+  border-bottom: 2px solid;
+  border-bottom-color: red;
+ }

@@ -9,34 +9,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
 
-  <body>
+  <body style="overflow: scroll;">
   
     <div class="container">
-      <div class='logo'>로고 이미지 <input type='search'><button>검색</button></div>
+      
+      <!-- 로그인/로그아웃, 상태창 -->
       <div class='status'>
         <% if !current_user.nil? %>
-          <a href='/new'>글쓰기</a>
           <%= current_user.last_name + current_user.first_name %>
           <%=link_to '로그아웃', logout_path%>
         <% else %>
-          <%=link_to '로그인', new_user_session_path%>
+          <a href="<%= new_user_session_path%>"><img src="<%= asset_path( 'signin.jpg' ) %>" alt="signin" width="70" height="35" /></a>
+          <a href="<%= new_user_session_path%>"><img src="<%= asset_path( 'login.jpg' ) %>" alt="login" width="70" height="35" /></a>
         <% end %>
       </div>
     </div>
+    
+    <div class="container">
+      <!-- 로고 -->
+      <div class='logo'>
+        <a href=<%= root_path %>><img src="<%= asset_path( 'locallage.jpg' ) %>" alt="logo" heigt="140" width="140"/></a> 
+      </div>
+      
+      <!-- 검색바 -->
+      <div class='search'>
+        <input type='search'><a href=""><img src="<%= asset_path( 'search_icon.jpg' ) %>" width="48" height="48" /></a>
+      </div>  
+      
+      <!-- 판매/구매/메시지 -->
+      <div class="sellbuy">
+        <a href="/new"><img src="<%= asset_path( 'sell.jpg' ) %>" width="55" height="30" /></a>
+        <a href=""><img src="<%= asset_path( 'buy.jpg' ) %>" width="45" height="33" /></a>
+        <a href=""><img src="<%= asset_path( 'message.jpg' ) %>" width="52" height="33" /></a>
+      </div>
+      
+    </div>
+    
     <!-- 메인 메뉴들 정리해둔 것 -->
     <div class="menu">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav container">
-            <a class="nav-item nav-link" href="/video">영상</a>
-            <a class="nav-item nav-link" href="/design">디자인</a>
-            <a class="nav-item nav-link" href="#">문서작업</a>
-            <a class="nav-item nav-link" href="#">번역/통역</a>
-            <a class="nav-item nav-link" href="#">홍보</a>
-            <a class="nav-item nav-link" href="#">과외</a>
+      <div class="bar">
+        <div class="nav">
+          <div class="container">
+            <div class="nav-item-list">
+              <a class="nav-item" href="/video"><img src="<%= asset_path( 'video.jpg' ) %>" width="45" height="25" /></a>
+              <a class="nav-item" href="/design"><img src="<%= asset_path( 'design.jpg' ) %>" width="60" height="25" /></a>
+              <a class="nav-item" href="#"><img src="<%= asset_path( 'document.jpg' ) %>" width="80" height="30" /></a>
+              <a class="nav-item" href="#"><img src="<%= asset_path( 'translation.jpg' ) %>" width="90" height="30" /></a>
+              <a class="nav-item" href="#"><img src="<%= asset_path( 'promotion.jpg' ) %>" width="45" height="25" /></a>
+              <a class="nav-item" href="#"><img src="<%= asset_path( 'tutoring.jpg' ) %>" width="45" height="25" /></a>
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
     <%= yield %>
     

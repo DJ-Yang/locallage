@@ -14,28 +14,56 @@
  *= require_self
  */
  
-.status {
-   text-align: right;
- }
- 
-.input-group {
-   width: 40%;
- }
- 
-.search {
-   position: absolute;
- }
- 
-.logo input {
-    border: 2px solid;
-    border-color: red;
+/* application.html.erb */
+.container {
+  min-width: 1160px;
 }
 
-.logo button {
-  background-color: red;
-  border-color: red;
+.status {
+  text-align-last: right
 }
-#navbarNavAltMarkup {
-  border-bottom: 2px solid;
+
+.logo {
+  display: inline;
+}
+
+.search {
+  display: inline;
+}
+
+.search input {
+  border: 2px solid;
+  border-color: red;
+  height: 40px;
+  width: 500px;
+}
+
+.sellbuy {
+  display: inline-block;
+  float: right
+}
+
+.bar {
+  margin-top: 30px;
+}
+
+.nav {
+  border-bottom: 4px solid;
   border-bottom-color: red;
- }
+  border-top: 2px solid;
+  border-top-color: grey;
+}
+
+.nav-item-list {
+  margin: 10px 0px 10px 0px;
+}
+
+.nav-item {
+  margin: 0px 5px 0px 5px;
+}
+
+
+/*로그인 관련 css*/
+.google {
+  text-align: center
+}

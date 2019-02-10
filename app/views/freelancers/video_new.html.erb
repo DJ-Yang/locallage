@@ -7,6 +7,8 @@
       
     <%= f.label :price %>
     <%= f.text_field :price %>
+    
+    <%= f.hidden_field :user_id, value: current_user.id %>
 
    <%= f.fields_for :video_attachments do |p| %>
      <div class="field">

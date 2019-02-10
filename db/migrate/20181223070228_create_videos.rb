@@ -5,6 +5,7 @@ class CreateVideos < ActiveRecord::Migration[5.0]
       t.string :locallage
       t.text :content
       t.string :price
+      t.integer :user_id
 
       t.timestamps
     end

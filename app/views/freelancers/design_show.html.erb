@@ -1,5 +1,9 @@
-<a href="../<%= @design.id %>/edit">수정</a>
-<a href="../show/<%= @design.id %>/delete">삭제</a>
+<% if !current_user.nil? %>
+  <% if ((current_user.id == @design.user_id) || (current_user.has_role? :admin)) %>
+    <a href="../<%= @design.id %>/edit">수정</a>
+    <a href="../show/<%= @design.id %>/delete">삭제</a>
+  <% end %>
+<% end %>
 
 <div>
   <%= @design.content %>

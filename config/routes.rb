@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     
-    devise_for :users
+    devise_for :user
     root 'freelancers#index'
 
     #메인페이지

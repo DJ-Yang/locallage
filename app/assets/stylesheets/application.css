@@ -15,6 +15,11 @@
  */
  
 /* application.html.erb */
+
+.flash {
+  text-align: center;
+}
+
 .container {
   min-width: 1160px;
 }

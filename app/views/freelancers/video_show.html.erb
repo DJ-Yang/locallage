@@ -1,5 +1,9 @@
-<a href="../<%= @video.id %>/edit">수정</a>
-<a href="../show/<%= @video.id %>/delete">삭제</a>
+<% if !current_user.nil? %>
+  <% if ((current_user.id == @video.user_id) || (current_user.has_role? :admin)) %>
+    <a href="../<%= @video.id %>/edit">수정</a>
+    <a href="../show/<%= @video.id %>/delete">삭제</a>
+  <% end %>
+<% end %>
 
 <div>
   <%= @video.content %>

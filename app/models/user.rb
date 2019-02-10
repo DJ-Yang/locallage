@@ -1,10 +1,15 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-         
-         
+  rolify
+  
+  after_create :assign_default_role
+  
+  def assign_default_role
+  	add_role(:customer)
+  end
+  
+  has_many :videos
+  has_many :designs
+  
   def self.find_or_create_from_auth_hash(auth)
 		where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
 			user.provider = auth.provider
@@ -17,4 +22,9 @@ class User < ApplicationRecord
 			user.save!
 		end
 	end
+	
+	# Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end

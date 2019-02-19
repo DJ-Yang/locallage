@@ -1,5 +1,4 @@
 <div class="container">
-  <h2>Log in</h2>
 
   <!--<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>-->
   <!--  <div class="field">-->
@@ -23,8 +22,15 @@
   <!--    <%= f.submit "Log in" %>-->
   <!--  </div>-->
   <!--<% end %>-->
+  
+  <div class="login-page">
+    <img src="<%= asset_path( 'login-bar1.png' ) %>" /><br />
+    <img src="<%= asset_path( 'login-bar2.png' ) %>" /><br />
+    <img src="<%= asset_path( 'login-bar3.png' ) %>" /><br />
+  </div>
+  
   <div class="google">
-    <a href="/auth/google_oauth2"><img src="<%= asset_path( 'google_login.png' ) %>"</a><br />
+    <a href="/auth/google_oauth2"><img src="<%= asset_path( 'google_login.png' ) %>" /></a><br />
   </div>
   <!--<%= render "devise/shared/links" %>-->
 </div>

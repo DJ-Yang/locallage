@@ -29,20 +29,22 @@
       </div>
     </div>
     
-    <div class="container">
-      <!-- 로고 -->
-      <div class='logo'>
-        <a href=<%= root_path %>><img src="<%= asset_path( '' ) %>" alt="logo" heigt="160" width="160"/></a> 
-      </div>
-    
+    <div class="logo_back">
+      <div class="container">
+        <!-- 로고 -->
+        <div class='logo'>
+          <a href=<%= root_path %>><img src="<%= asset_path( 'mainlogo.png' ) %>" alt="logo" /></a> 
+        </div>
       
-      <!-- HOME/ABOUT/BLOG -->
-      <div class="first_bar">
-        <a href=""><img src="<%= asset_path( 'home.png' ) %>" /></a>
-        <a href=""><img src="<%= asset_path( 'about.png' ) %>" /></a>
-        <a href=""><img src="<%= asset_path( 'blog.png' ) %>" /></a>
+        
+        <!-- HOME/ABOUT/BLOG -->
+        <div class="first_bar">
+          <a href="/design"><img src="<%= asset_path( 'design.png' ) %>" /></a>
+          <a href="/video"><img src="<%= asset_path( 'video.png' ) %>" /></a>
+          <a href="#"><img src="<%= asset_path( 'promotion.png' ) %>" /></a>
+        </div>
+        
       </div>
-      
     </div>
     
     <!-- 메인 메뉴들 정리해둔 것 -->
@@ -51,12 +53,12 @@
         <div class="container">
           <div class="nav">
             <div class="product">
-              <a href="/design"><img src="<%= asset_path( 'design.png' ) %>" /></a>
-              <a href="/video"><img src="<%= asset_path( 'video.png' ) %>" /></a>
-              <a href="#"><img src="<%= asset_path( 'promotion.png' ) %>" /></a>
+              <a href=""><img src="<%= asset_path( 'home.png' ) %>" /></a>
+              <a href=""><img src="<%= asset_path( 'about.png' ) %>" /></a>
+              <a href=""><img src="<%= asset_path( 'blog.png' ) %>" /></a>
             </div>
             <div class="status2">
-              <a href="/new"><img src="<%= asset_path( 'buysell.png' ) %>" /></a>
+              <!--<a href="/new"><img src="<%= asset_path( 'buysell.png' ) %>" /></a>-->
               <a href=<%= new_user_session_path%>><img src="<%= asset_path( 'login.png' ) %>" /></a>
             </div>
           </div>

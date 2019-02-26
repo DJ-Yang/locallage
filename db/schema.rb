@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20190210114840) do
   create_table "designs", force: :cascade do |t|
     t.string   "title"
     t.string   "locallage"
+    t.string   "university"
+    t.string   "grade"
     t.text     "content"
-    t.string   "price"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,8 +82,9 @@ ActiveRecord::Schema.define(version: 20190210114840) do
   create_table "videos", force: :cascade do |t|
     t.string   "title"
     t.string   "locallage"
+    t.string   "university"
+    t.string   "grade"
     t.text     "content"
-    t.string   "price"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

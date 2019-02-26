@@ -3,8 +3,9 @@ class CreateVideos < ActiveRecord::Migration[5.0]
     create_table :videos do |t|
       t.string :title
       t.string :locallage
+      t.string :university
+      t.string :grade
       t.text :content
-      t.string :price
       t.integer :user_id
 
       t.timestamps

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="design-index">
+    <div class="index">
         <div class="row">
             <div class="col-3">
                 <div class="category">
@@ -12,11 +12,30 @@
             
             <div class="col-8">
                 <div>
-                    <img src="<%= asset_path( 'design-category.png' ) %>" /><br>
+                    <img src="<%= asset_path( 'design-category.png' ) %>" />
                 </div>
                 <div>
                     <% @designs.each do |design| %>
-                        <a href="design/show/<%= design.id %>"><img src="<%= design.locallage.url %>"></a>
+                        <div class="product-list">
+                            <a href="design/show/<%= design.id %>">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="<%= design.locallage.url %>" width=250 heigh=250>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="product-content">
+                                            <p>
+                                                <span class="index-university"><%= design.university %>대학교</span>
+                                                <span class="index-grade"><%= design.grade %>학년</span>
+                                            </p>
+                                            <p class="index-title">
+                                                <%= design.title %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     <% end %>
                 </div>
             </div>

@@ -2,11 +2,17 @@
     <%= f.label :locallage %>
     <%= f.file_field :locallage %>
       
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    
+    <%= f.label :university %>
+    <%= f.text_field :university %>
+    
+    <%= f.label :grade %>
+    <%= f.text_field :grade %>
+    
     <%= f.label :content %>
     <%= f.text_area :content %>
-      
-    <%= f.label :price %>
-    <%= f.text_field :price %>
     
     <%= f.hidden_field :user_id, value: current_user.id %>
 

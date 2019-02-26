@@ -6,17 +6,20 @@
 <% end %>
 
 <div>
-  <%= @video.content %>
 </div>
 <div>
-  <%= @video.price %>
+</div>
+<div>
+</div>
+<div>
+  <%= @video.content %>
 </div>
 <div>
   <img src="<%= @video.locallage.url %>">
 </div>
 <div>
   <% @video_attachments.each do |p| %>
-    <%= image_tag p.portfolio_url %>
+    <%= p.portfolio_url %>
     <!--<?%= link_to "Edit Attachment", _path(p) %>-->
   <% end %>
 </div>

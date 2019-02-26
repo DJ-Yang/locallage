@@ -60,15 +60,11 @@
   background-color: orange;
 }
 
-.status2 {
-  padding-left: 560px;
+.status {
+  padding-left: 570px;
 }
 
-.status2 a {
-  padding: 0px 30px 0px 30px;
-}
-
-.status2 a:hover {
+.status a:hover {
   background-color: orange;
 }
 
@@ -107,6 +103,10 @@
   text-align: center;
 }
 
+.google a:hover {
+  background-color: white;
+}
+
 .login-page {
   text-align: center;
   padding: 50px 0px 50px 0px;
@@ -118,7 +118,7 @@
 }
 
 .main .container {
-  margin-top: 100px;
+  margin-top: 80px;
   background-color: rgb(242, 230, 211);
 }
 
@@ -126,12 +126,68 @@
   text-align: center;
 }
 
-/* design-index */
-.design-index {
+/* index */
+.index {
   padding-top: 30px;
 }
 
-/* video-index */
-.video-index {
+.product-list {
+  margin-top: 30px;
+  border: solid 2px;
+}
+
+.product-list a {
+  width: 100%;
+  display: inline;
+}
+
+.product-content {
   padding-top: 30px;
+  border: solid 2px;
+  height: 100%;
+}
+
+.index-university {
+  font-size: 25px;
+  border: solid 2px;
+}
+
+.index-grade {
+  font-size: 25px;
+  border: solid 2px;
+}
+
+.index-title {
+  font-size: 25px;
+  border: solid 2px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+/* detail */
+.detail-unoversity {
+  
+}
+
+.detail-grade {
+  
+}
+
+.detail-title {
+  
+}
+
+.detail-content {
+  border: solid 2px;
+  margin: 50px 0px 50px 0px;
+}
+
+.portfolio{
+}
+
+.portfolio-each {
+  display: inline;
+  width:325px; 
+  height:280px; 
+  overflow:hidden
 }

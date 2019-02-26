@@ -141,19 +141,19 @@ class FreelancersController < ApplicationController
     end
     
     def video_params
-      params.require(:video).permit(:content, :price, :locallage, :user_id, video_attachments_attributes: [:id, :video_id, :portfolio])
+      params.require(:video).permit(:title, :university, :grade, :content, :locallage, :user_id, video_attachments_attributes: [:id, :video_id, :portfolio])
     end
     
     def design_params
-      params.require(:design).permit(:content, :price, :locallage, :user_id, design_attachments_attributes: [:id, :design_id, :portfolio])
+      params.require(:design).permit(:title, :university, :grade, :content, :locallage, :user_id, design_attachments_attributes: [:id, :design_id, :portfolio])
     end
     
     def video_update_params
-      params.require(:video).permit(:content, :price, :locallage, video_attachments_attributes: [:id, :video_id, :portfolio])
+      params.require(:video).permit(:title, :university, :grade, :content, :locallage, video_attachments_attributes: [:id, :video_id, :portfolio])
     end
     
     def design_update_params
-      params.require(:design).permit(:content, :price, :locallage, design_attachments_attributes: [:id, :design_id, :portfolio])
+      params.require(:design).permit(:title, :university, :grade, :content, :locallage, design_attachments_attributes: [:id, :design_id, :portfolio])
     end
       
 end

@@ -4,19 +4,35 @@
     <a href="../show/<%= @design.id %>/delete">삭제</a>
   <% end %>
 <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="<%= @design.locallage.url %>" width=680 heigh= 480>
+    </div>
+    <div class="col">
+      <div class="detail-university">
+        <%= @design.university %>
+      </div>
+      <div class="detail-grade">
+        <%= @design.grade %>
+      </div>
+      <div class="detail-title">
+        <%= @design.title %>
+      </div>
+    </div>
+  </div>
+  <div class="detail-content">
+    <%= @design.content %>
+  </div>
+  <div class="postfolio">
+    <% @design_attachments.each do |p| %>
+      <div class="portfolio-each">
+        <a href="<%= p.portfolio_url %>" >
+          <img src="<%= p.portfolio_url %>" width=270 heigh= 100>
+          </a>
+      </div>
+      <!--<?%= link_to "Edit Attachment", _path(p) %>-->
+    <% end %>
+  </div>
+</div>
 
-<div>
-  <%= @design.content %>
-</div>
-<div>
-  <%= @design.price %>
-</div>
-<div>
-  <img src="<%= @design.locallage.url %>">
-</div>
-<div>
-  <% @design_attachments.each do |p| %>
-    <%= image_tag p.portfolio_url %>
-    <!--<?%= link_to "Edit Attachment", _path(p) %>-->
-  <% end %>
-</div>

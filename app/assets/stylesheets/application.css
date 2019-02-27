@@ -112,7 +112,7 @@
   padding: 50px 0px 50px 0px;
 }
 
-/* index */
+/* main-index */
 .main {
   margin-bottom: -250px;
 }
@@ -126,7 +126,14 @@
   text-align: center;
 }
 
-/* index */
+/* about */
+.about {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -380px;
+}
+
+/* category-index */
 .index {
   padding-top: 30px;
 }

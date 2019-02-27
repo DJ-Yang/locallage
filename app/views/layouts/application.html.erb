@@ -42,8 +42,8 @@
           <div class="nav">
             <div class="product">
               <a href=<%= root_path %>><img src="<%= asset_path( 'home.png' ) %>" /></a>
-              <a href=""><img src="<%= asset_path( 'about.png' ) %>" /></a>
-              <a href=""><img src="<%= asset_path( 'blog.png' ) %>" /></a>
+              <a href="/about"><img src="<%= asset_path( 'about.png' ) %>" /></a>
+              <a href="/ready"><img src="<%= asset_path( 'blog.png' ) %>" /></a>
             </div>
             <div class="status">
               <% if !current_user.nil? %>

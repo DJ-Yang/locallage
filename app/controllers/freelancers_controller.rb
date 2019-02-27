@@ -28,6 +28,7 @@ class FreelancersController < ApplicationController
   
   def video
     @videos = Video.all
+    # <%= p.portfolio_url.split('.')[-1] %>
   end
   
   def video_new

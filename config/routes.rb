@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     #메인페이지
     get 'new' => 'freelancers#new'
     post 'category' => 'freelancers#category'
+    get 'ready' => 'freelancers#ready'
+    get 'about' => 'freelancers#about'
     
     #영상관련
     get 'video' => 'freelancers#video'

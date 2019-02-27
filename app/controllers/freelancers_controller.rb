@@ -20,6 +20,12 @@ class FreelancersController < ApplicationController
     end
   end
   
+  def ready
+  end
+  
+  def about
+  end
+  
   def video
     @videos = Video.all
   end

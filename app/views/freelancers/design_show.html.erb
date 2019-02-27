@@ -30,6 +30,7 @@
         <a href="<%= p.portfolio_url %>" >
           <img src="<%= p.portfolio_url %>" width=270 heigh= 100>
           </a>
+        <%= p.portfolio_url.split('.')[-1] %>
       </div>
       <!--<?%= link_to "Edit Attachment", _path(p) %>-->
     <% end %>

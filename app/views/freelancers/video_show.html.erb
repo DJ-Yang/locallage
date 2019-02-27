@@ -15,11 +15,14 @@
   <%= @video.content %>
 </div>
 <div>
-  <img src="<%= @video.locallage.url %>">
+  <img src="<%= @video.locallage.url %>"><br>
 </div>
 <div>
   <% @video_attachments.each do |p| %>
-    <%= p.portfolio_url %>
+    <!--<%= p.portfolio_url %>-->
+    <video width="320" height="240" controls>
+      <source src=<%= p.portfolio_url %> type="video/mp4">
+    </video>
     <!--<?%= link_to "Edit Attachment", _path(p) %>-->
   <% end %>
 </div>

@@ -1,29 +1,33 @@
-<%= form_for(@design, :html => { :multipart => true }, url: design_create_path) do |f| %>
-    <%= f.label :locallage %>
-    <%= f.file_field :locallage %>
-      
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    
-    <%= f.label :university %>
-    <%= f.text_field :university %>
-    
-    <%= f.label :grade %>
-    <%= f.text_field :grade %>
-    
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-    
-    <%= f.hidden_field :user_id, value: current_user.id %>
+<div class="new-content">
+    <div class="container">
+        <%= form_for(@design, :html => { :multipart => true }, url: design_create_path) do |f| %>
+            <%= f.label :locallage %>
+            <%= f.file_field :locallage %>
+              
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+            
+            <%= f.label :university %>
+            <%= f.text_field :university %>
+            
+            <%= f.label :grade %>
+            <%= f.text_field :grade %>
+            
+            <%= f.label :content %>
+            <%= f.text_area :content %>
+            
+            <%= f.hidden_field :user_id, value: current_user.id %>
+        
+           <%= f.fields_for :design_attachments do |p| %>
+             <div class="field">
+               <%= p.label :portfolio %><br>
+               <%= p.file_field :portfolio, :multiple => true, name: "design_attachments[portfolio][]" %>
+             </div>
+            <% end %>
+           <div class="actions">
+             <%= f.submit %>
+           </div>
+        <% end %>
 
-   <%= f.fields_for :design_attachments do |p| %>
-     <div class="field">
-       <%= p.label :portfolio %><br>
-       <%= p.file_field :portfolio, :multiple => true, name: "design_attachments[portfolio][]" %>
-     </div>
-   <% end %>
-
-   <div class="actions">
-     <%= f.submit %>
    </div>
-<% end %>
+</div>

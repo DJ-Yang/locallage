@@ -112,6 +112,7 @@ class FreelancersController < ApplicationController
   
   def design_show
     @design = Design.find(params[:id])
+    
     @design_attachments = @design.design_attachments.all
   end
   

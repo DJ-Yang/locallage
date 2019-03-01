@@ -1,6 +1,7 @@
 <div class="new-content">
     <div class="container">
         <%= form_for(@design, :html => { :multipart => true }, url: design_create_path) do |f| %>
+        
             <%= f.label :locallage %>
             <%= f.file_field :locallage %>
               

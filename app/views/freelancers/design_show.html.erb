@@ -1,39 +1,131 @@
 <div class="detail">
   <div class="container">
+    
     <% if !current_user.nil? %>
       <% if ((current_user.id == @design.user_id) || (current_user.has_role? :admin)) %>
         <a href="../<%= @design.id %>/edit">수정</a>
         <a href="../show/<%= @design.id %>/delete">삭제</a>
       <% end %>
     <% end %>
+    
     <div class="row">
-      <div class="col">
+      
+      <div class="col-7">
         <img src="<%= @design.locallage.url %>" width=680 heigh= 480>
       </div>
-      <div class="col">
-        <div class="detail-university">
-          <%= @design.university %>대학교
-        </div>
-        <div class="detail-grade">
-          <%= @design.grade %>학년
-        </div>
+      
+      <div class="col-3">
+        
         <div class="detail-title">
           <%= @design.title %>
         </div>
+        
+        <div class="detail-status">
+          <div>
+            LOGO DESIGN v
+          </div>
+          <div>
+            여기는 뭐 종류 냅두는 것 같음
+          </div>
+          <div class="detail-university">
+            <%= @design.university %>대학교
+          </div>
+          <div class="detail-grade">
+            <%= @design.grade %>학년
+          </div>
+          <div class="detail-day">
+            작업일
+          </div>
+          <div class="detail-buy">
+            구매버튼
+          </div>
+          
+        </div>
       </div>
     </div>
-    <div class="detail-content">
-      <%= @design.content %>
-    </div>
-    <div class="postfolio">
-      <% @design_attachments.each do |p| %>
-        <div class="portfolio-each">
-          <a href="<%= p.portfolio_url %>" >
-            <img src="<%= p.portfolio_url %>" width=270 heigh= 100>
-          </a>
+    
+    <div class="row">
+      
+      <div class="col-7">
+        <div class="detail-information">
+          <div class="row">
+            <div class="col detail-information1"><a onclick="mostrar(0);">가격정보</a></div>
+            <div class="col detail-information2"><a onclick="mostrar(1);">수정사항</a></div>
+            <div class="col detail-information3"><a onclick="mostrar(2);">취소 및 환불규정</a></div>
+          </div>
         </div>
-        <!--<?%= link_to "Edit Attachment", _path(p) %>-->
-      <% end %>
+      </div>
+      
+      <div class="col-3"></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-7">
+        <div class="information-content">
+          <div class="hide detail-price">
+            <p> 디자인 가격<br>
+            텍스트디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
+            명함디자인 – 명함디자인 2종 – 40,000원 – 2~3일<br>
+            PPT디자인 – PPT디자인(인포그래픽) - 장당 5,000원 – 2~3일<br>
+            현수막디자인 – 현수막디자인 – 30,000원 – 2~3일<br>
+            포스터디자인 – 포스터디자인(A2, A4) - 2~3일</p>
+          </div>
+          
+          <div class="hide detail-fix">
+            <p> 기본 수정 규정<br>
+            1. 무료 수정 기본 2회 진행<br>
+            2. 2차 시안 이후 수정은 색상 및 크기변경, 위치변경 등 간단한 수정만 가능<br>
+            3. 1차 시안 이후 환불 60%, 2차 시안 이후 환불 불가</p>
+          </div>
+          
+          <div class="hide detail-refund">
+            <p> 취소 및 환불 규정<br>
+            1. 전문가와 의뢰인 간의 상호 협의 후 청약철회가 가능<br>
+            2. 전문가의 귀책사유로 디자인 작업이 시작되지 않았거나 보편적 관점에서 심각하게 잘못 이행한 경우 결제 금액 전체 환불이 가능<br>
+            3. 전문가가 작업 기간 동안 지정된 서비스를 제공하지 못한 경우 지급받은 서비스 비용을 일할 계산하여 작업물 개수와 작업기간 일수만큼 공제하고 잔여 금액을 환불합니다</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-7">
+        <div class="detail-content">
+          <%= @design.content %>
+        </div>
+        <div class="postfolio">
+          <% @design_attachments.each do |p| %>
+            <div class="portfolio-each">
+              <a href="<%= p.portfolio_url %>" >
+                <img src="<%= p.portfolio_url %>"><br>
+              </a>
+            </div>
+            <!--<?%= link_to "Edit Attachment", _path(p) %>-->
+          <% end %>
+        </div>
+      </div>
+      <div class="col-3"></div>
     </div>
   </div>
 </div>
+
+<script>
+  function mostrar(order) {
+    switch (order) {
+        case 0:
+            $(".hide").removeClass("show");
+            $(".detail-price").addClass("show");
+            break;
+        case 1:
+            $(".hide").removeClass("show");
+            $(".detail-fix").addClass("show");
+            break;
+        case 2:
+            $(".hide").removeClass("show");
+            $(".detail-refund").addClass("show");
+            break;
+    }
+  }
+</script>

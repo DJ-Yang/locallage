@@ -5,7 +5,7 @@ class LocallageUploader < CarrierWave::Uploader::Base
   
   version :medium do
     # returns a 50x50 image
-    process :resize_to_fill => [200, 200]
+    process :resize_to_fit => [200, 200]
   end
   
   # def extension_white_list

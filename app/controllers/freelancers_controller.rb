@@ -7,6 +7,9 @@ class FreelancersController < ApplicationController
     if !user_signed_in?
       flash[:alert] = "로그인이 필요합니다!"
       redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "작성권한이 없습니다"
+      redirect_to root_path
     end
   end
   

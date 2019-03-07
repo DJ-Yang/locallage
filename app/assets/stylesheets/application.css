@@ -103,14 +103,14 @@ html, body {
 }
 
 /*로그인 관련 css*/
-/*.google {*/
-/*  text-align: center;*/
-/*  margin-top: 100px;*/
-/*}*/
+.google {
+  text-align: center;
+  margin-top: 100px;
+}
 
-/*.google a:hover {*/
-/*  background-color: white;*/
-/*}*/
+.google a:hover {
+  background-color: white;
+}
 
 .login-page {
   text-align: center;
@@ -118,40 +118,6 @@ html, body {
   min-height: 100%;
   margin-bottom: -200px;
 }
-#customBtn {
-      display: inline-block;
-      background: white;
-      color: #444;
-      width: 190px;
-      border-radius: 5px;
-      border: thin solid #888;
-      box-shadow: 1px 1px 1px grey;
-      white-space: nowrap;
-    }
-    #customBtn:hover {
-      cursor: pointer;
-    }
-    span.label {
-      font-family: serif;
-      font-weight: normal;
-    }
-    span.icon {
-      background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-      display: inline-block;
-      vertical-align: middle;
-      width: 42px;
-      height: 42px;
-    }
-    span.buttonText {
-      display: inline-block;
-      vertical-align: middle;
-      padding-left: 42px;
-      padding-right: 42px;
-      font-size: 14px;
-      font-weight: bold;
-      /* Use the Roboto font that is loaded in the <head> */
-      font-family: 'Roboto', sans-serif;
-    }
 
 /* main-index */
 .main {
@@ -234,8 +200,13 @@ html, body {
 
 /* detail */
 
-.hide { display: none;}
-.show { display:block!important}
+.hide { 
+  display: none;
+}
+.show { 
+  display: block!important
+  
+}
 
 .detail {
   min-height: 100%;
@@ -269,31 +240,49 @@ html, body {
   width: 100%;
   text-align: center;
   margin: 50px 0px 0px 0px;
+  padding-left: 10px;
   /*border: solid 1px;*/
   /*border-color: grey;*/
 }
 
 .detail-information1 {
   border: solid 1px;
+  border-color: grey;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
 }
 
 .detail-information2 {
   border: solid 1px;
+  border-color: grey;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
 }
 
 .detail-information3 {
   border: solid 1px;
+  border-color: grey;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
 }
 
 .detail-information a {
   color: black;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .detail-information a:hover {
   background-color: white;
   color: black;
+}
+
+.detail-information-content {
+  padding-top: 20px;  
 }
 
 .detail-content {
@@ -302,7 +291,7 @@ html, body {
   width: 100%;
 }
 
-.portfolio{
+.portfolio {
 }
 
 .portfolio-each {

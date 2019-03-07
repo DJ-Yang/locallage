@@ -27,6 +27,7 @@
           <div>
             여기는 뭐 종류 냅두는 것 같음
           </div>
+          <hr>
           <div class="detail-university">
             <%= @design.university %>대학교
           </div>
@@ -37,7 +38,7 @@
             작업일
           </div>
           <div class="detail-buy">
-            구매버튼
+            <a herf=""><img src="<%= asset_path( '' ) %>" /></a>
           </div>
           
         </div>
@@ -61,7 +62,7 @@
     
     <div class="row">
       <div class="col-7">
-        <div class="information-content">
+        <div class="detail-information-content">
           <div class="hide detail-price">
             <p> 디자인 가격<br>
             텍스트디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>

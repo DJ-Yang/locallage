@@ -10,8 +10,8 @@
     
     <div class="row">
       
-      <div class="col-7">
-        <img src="<%= @design.locallage.url %>" width=680 heigh= 480>
+      <div class="col-7 detail-image">
+        <img src="<%= @design.locallage.personal.url %>">
       </div>
       
       <div class="col-3">
@@ -21,24 +21,26 @@
         </div>
         
         <div class="detail-status">
-          <div>
-            LOGO DESIGN v
+          <div class="status-1">
+            LOGO DESIGN &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;v
           </div>
-          <div>
-            여기는 뭐 종류 냅두는 것 같음
-          </div>
-          <hr>
-          <div class="detail-university">
-            <%= @design.university %>대학교
-          </div>
-          <div class="detail-grade">
-            <%= @design.grade %>학년
-          </div>
-          <div class="detail-day">
-            작업일
-          </div>
-          <div class="detail-buy">
-            <a herf=""><img src="<%= asset_path( '' ) %>" /></a>
+          <div class="status-2">
+            <div class="status-2-content">
+              텍스트형 2종 + 심볼형 1종 = 100,000~
+            </div>
+            <hr>
+            <div class="detail-university">
+              <%= @design.university %>대학교
+            </div>
+            <div class="detail-grade">
+              <%= @design.grade %>학년
+            </div>
+            <div class="detail-day">
+              작업일
+            </div>
+            <div class="detail-buy">
+              <a herf=""><img src="<%= asset_path( '' ) %>" /></a>
+            </div>
           </div>
           
         </div>
@@ -64,12 +66,29 @@
       <div class="col-7">
         <div class="detail-information-content">
           <div class="hide detail-price">
-            <p> 디자인 가격<br>
-            텍스트디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
+            <p> 가격정보<br>
+            디자인정보 – 디자인내역 – 가격 – 기간<br>
+            로고디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
             명함디자인 – 명함디자인 2종 – 40,000원 – 2~3일<br>
             PPT디자인 – PPT디자인(인포그래픽) - 장당 5,000원 – 2~3일<br>
             현수막디자인 – 현수막디자인 – 30,000원 – 2~3일<br>
-            포스터디자인 – 포스터디자인(A2, A4) - 2~3일</p>
+            포스터디자인 – 포스터디자인(A2, A4) - 2~3일<br>
+            <br>가격정보<br>
+            촬영소스 – 1. 30분 미만<br>
+            편집 : 1분 내외 -> 5만 원<br>
+            &emsp;3분 미만 -> 7만 원<br>
+            &emsp;3~5분 -> 12만 원<br>
+            &emsp;5분 ~ 10분 -> 15만 원<br>
+            <br>
+            촬영소스 – 30분 ~ 1시간 미만<br>
+            편집 : 1분 내외 -> 7만원<br>
+            &emsp;3분 미만 -> 10만원<br>
+            &emsp;3~ 5분 -> 15만원<br>
+            &emsp;5분~10분 -> 20만원<br>
+            <br>
+            들어가는 요소<br>
+            - 자막삽입 – 배경음악<br>
+            - 색 보정  = 로고삽입</p>
           </div>
           
           <div class="hide detail-fix">

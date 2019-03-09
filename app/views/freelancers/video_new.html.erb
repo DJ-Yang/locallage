@@ -1,31 +1,35 @@
-<%= form_for(@video, :html => { :multipart => true }, url: video_create_path) do |f| %>
+<div class="new-content">
+  <div class="container">
+    <%= form_for(@video, :html => { :multipart => true }, url: video_create_path) do |f| %>
     
-    <%= f.label :locallage %>
-    <%= f.file_field :locallage %>
+      <%= f.label :locallage %>
+      <%= f.file_field :locallage %>
       
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
     
-    <%= f.label :university %>
-    <%= f.text_field :university %>
+      <%= f.label :university %>
+      <%= f.text_field :university %>
     
-    <%= f.label :grade %>
-    <%= f.text_field :grade %>
+      <%= f.label :grade %>
+      <%= f.text_field :grade %>
     
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+      <%= f.label :content %>
+      <%= f.text_area :content %>
       
     
-    <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
 
-   <%= f.fields_for :video_attachments do |p| %>
-     <div class="field">
-       <%= p.label :portfolio %><br>
-       <%= p.file_field :portfolio, :multiple => true, name: "video_attachments[portfolio][]" %>
+      <%= f.fields_for :video_attachments do |p| %>
+      <div class="field">
+        <%= p.label :portfolio %><br>
+        <%= p.file_field :portfolio, :multiple => true, name: "video_attachments[portfolio][]" %>
+      </div>
+      <% end %>
+
+     <div class="actions">
+       <%= f.submit %>
      </div>
-   <% end %>
-
-   <div class="actions">
-     <%= f.submit %>
-   </div>
-<% end %>
+    <% end %>
+  </div>
+</div>

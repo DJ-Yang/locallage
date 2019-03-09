@@ -1,28 +1,149 @@
-<% if !current_user.nil? %>
-  <% if ((current_user.id == @video.user_id) || (current_user.has_role? :admin)) %>
-    <a href="../<%= @video.id %>/edit">수정</a>
-    <a href="../show/<%= @video.id %>/delete">삭제</a>
-  <% end %>
-<% end %>
+<div class="detail">
+  <div class="container">
+    
+    <% if !current_user.nil? %>
+      <% if ((current_user.id == @video.user_id) || (current_user.has_role? :admin)) %>
+        <a href="../<%= @video.id %>/edit">수정</a>
+        <a href="../show/<%= @video.id %>/delete">삭제</a>
+      <% end %>
+    <% end %>
+    
+    <div class="row">
+      
+      <div class="col-7">
+        <img src="<%= @video.locallage.url %>" width=680 heigh= 480>
+      </div>
+      
+      <div class="col-3">
+        
+        <div class="detail-title">
+          <%= @video.title %>
+        </div>
+        
+        <div class="detail-status">
+          <div>
+            LOGO video v
+          </div>
+          <div>
+            여기는 뭐 종류 냅두는 것 같음
+          </div>
+          <hr>
+          <div class="detail-university">
+            <%= @video.university %>대학교
+          </div>
+          <div class="detail-grade">
+            <%= @video.grade %>학년
+          </div>
+          <div class="detail-day">
+            작업일
+          </div>
+          <div class="detail-buy">
+            <a herf=""><img src="<%= asset_path( '' ) %>" /></a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-7">
+        <div class="detail-information">
+          <div class="row">
+            <div class="col detail-information1"><a onclick="mostrar(0);">가격정보</a></div>
+            <div class="col detail-information2"><a onclick="mostrar(1);">수정사항</a></div>
+            <div class="col detail-information3"><a onclick="mostrar(2);">취소 및 환불규정</a></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3"></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-7">
+        <div class="detail-information-content">
+          <div class="hide detail-price">
+            <p> 가격정보<br>
+            디자인정보 – 디자인내역 – 가격 – 기간<br>
+            로고디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
+            명함디자인 – 명함디자인 2종 – 40,000원 – 2~3일<br>
+            PPT디자인 – PPT디자인(인포그래픽) - 장당 5,000원 – 2~3일<br>
+            현수막디자인 – 현수막디자인 – 30,000원 – 2~3일<br>
+            포스터디자인 – 포스터디자인(A2, A4) - 2~3일<br>
+            <br>가격정보<br>
+            촬영소스 – 1. 30분 미만<br>
+            편집 : 1분 내외 -> 5만 원<br>
+            &emsp;3분 미만 -> 7만 원<br>
+            &emsp;3~5분 -> 12만 원<br>
+            &emsp;5분 ~ 10분 -> 15만 원<br>
+            <br>
+            촬영소스 – 30분 ~ 1시간 미만<br>
+            편집 : 1분 내외 -> 7만원<br>
+            &emsp;3분 미만 -> 10만원<br>
+            &emsp;3~ 5분 -> 15만원<br>
+            &emsp;5분~10분 -> 20만원<br>
+            <br>
+            들어가는 요소<br>
+            - 자막삽입 – 배경음악<br>
+            - 색 보정  = 로고삽입</p>
+          </div>
+          
+          <div class="hide detail-fix">
+            <p> 기본 수정 규정<br>
+            1. 무료 수정 기본 2회 진행<br>
+            2. 2차 시안 이후 수정은 색상 및 크기변경, 위치변경 등 간단한 수정만 가능<br>
+            3. 1차 시안 이후 환불 60%, 2차 시안 이후 환불 불가</p>
+          </div>
+          
+          <div class="hide detail-refund">
+            <p> 취소 및 환불 규정<br>
+            1. 전문가와 의뢰인 간의 상호 협의 후 청약철회가 가능<br>
+            2. 전문가의 귀책사유로 디자인 작업이 시작되지 않았거나 보편적 관점에서 심각하게 잘못 이행한 경우 결제 금액 전체 환불이 가능<br>
+            3. 전문가가 작업 기간 동안 지정된 서비스를 제공하지 못한 경우 지급받은 서비스 비용을 일할 계산하여 작업물 개수와 작업기간 일수만큼 공제하고 잔여 금액을 환불합니다</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-7">
+        <div class="detail-content">
+          <%= @video.content %>
+        </div>
+        <div class="postfolio">
+          <% @video_attachments.each do |p| %>
+            <div class="portfolio-each">
+              <a href="<%= p.portfolio_url %>" >
+                <img src="<%= p.portfolio_url %>"><br>
+              </a>
+            </div>
+            <!--<?%= link_to "Edit Attachment", _path(p) %>-->
+          <% end %>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</div>
 
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-  <%= @video.content %>
-</div>
-<div>
-  <img src="<%= @video.locallage.url %>"><br>
-</div>
-<div>
-  <% @video_attachments.each do |p| %>
-    <!--<%= p.portfolio_url %>-->
-    <video width="320" height="240" controls>
-      <source src=<%= p.portfolio_url %> type="video/mp4">
-    </video>
-    <!--<?%= link_to "Edit Attachment", _path(p) %>-->
-  <% end %>
-</div>
+<script>
+  function mostrar(order) {
+    switch (order) {
+        case 0:
+            $(".hide").removeClass("show");
+            $(".detail-price").addClass("show");
+            break;
+        case 1:
+            $(".hide").removeClass("show");
+            $(".detail-fix").addClass("show");
+            break;
+        case 2:
+            $(".hide").removeClass("show");
+            $(".detail-refund").addClass("show");
+            break;
+    }
+  }
+</script>

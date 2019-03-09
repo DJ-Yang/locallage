@@ -12,11 +12,32 @@
             
             <div class="col-8">
                 <div>
-                    <img src="<%= asset_path( 'video-category.png' ) %>" /><br>
+                    <img src="<%= asset_path( 'video-category.png' ) %>" />
                 </div>
                 <div>
                     <% @videos.each do |video| %>
-                        <a href="video/show/<%= video.id %>"><img src="<%= video.locallage.url %>"></a>
+                        <div class="product-list">
+                            <a href="video/show/<%= video.id %>">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="index-image">
+                                            <img src="<%= video.locallage.medium.url %>" width=300 weight=300 >
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="product-content">
+                                            <p>
+                                                <span class="index-university"><%= video.university %>대학교</span>
+                                                <span class="index-grade"><%= video.grade %>학년</span>
+                                            </p>
+                                            <p class="index-title">
+                                                <%= video.title %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     <% end %>
                 </div>
             </div>

@@ -35,11 +35,15 @@
             <div class="detail-grade">
               <%= @design.grade %>학년
             </div>
-            <div class="detail-day">
-              작업일
+            <div class="detail-fix">
+              <img src="<%= asset_path( 'fix-status.jpg' ) %>"  width=220 height=60 />
             </div>
+            <div class="detail-day">
+              <img src="<%= asset_path( 'woking-day.jpg' ) %>" / width=100 height=30 />
+            </div>
+            
             <div class="detail-buy">
-              <a herf=""><img src="<%= asset_path( '' ) %>" /></a>
+              <a href="#"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
             </div>
           </div>
           

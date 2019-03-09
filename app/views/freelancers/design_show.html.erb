@@ -17,7 +17,7 @@
       <div class="col-3">
         
         <div class="detail-title">
-          <%= @design.title %>
+          <b><%= @design.title %></b>
         </div>
         
         <div class="detail-status">
@@ -36,10 +36,11 @@
               <%= @design.grade %>학년
             </div>
             <div class="detail-fix">
-              <img src="<%= asset_path( 'fix-status.jpg' ) %>"  width=220 height=60 />
+              <i class="fas fa-check" style="color:orange"></i>원본 파일 제공 <i class="fas fa-check" style="color:orange"></i>무료 수정 2회 제공<br>
+              <i class="fas fa-check" style="color:orange"></i>시안 개수 : 2개
             </div>
             <div class="detail-day">
-              <img src="<%= asset_path( 'woking-day.jpg' ) %>" / width=100 height=30 />
+              <i class="far fa-calendar-alt"></i> 작업일 : 2 ~ 3일
             </div>
             
             <div class="detail-buy">

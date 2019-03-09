@@ -5,11 +5,11 @@ class LocallageUploader < CarrierWave::Uploader::Base
   
   version :medium do
     # returns a 50x50 image
-    process :my_resize => [200, 200]
+    process :my_resize => [600, 400]
   end
   
   version :personal do
-    process :resize_to_fit => [500, 500]
+    process :resize_to_limit => [640, 500]
   end
   
   # def extension_white_list

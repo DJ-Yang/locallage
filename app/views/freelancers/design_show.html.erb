@@ -1,6 +1,7 @@
 <div class="detail">
   <div class="container">
     
+    
     <% if !current_user.nil? %>
       <% if ((current_user.id == @design.user_id) || (current_user.has_role? :admin)) %>
         <a href="../<%= @design.id %>/edit">수정</a>
@@ -22,22 +23,19 @@
         
         <div class="detail-status">
           <div class="status-1">
-            LOGO DESIGN &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;v
+            LOGO DESIGN &emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
           </div>
           <div class="status-2">
-            <div class="status-2-content">
-              텍스트형 2종 + 심볼형 1종 = 100,000~
-            </div>
-            <hr>
             <div class="detail-university">
               <%= @design.university %>대학교
             </div>
             <div class="detail-grade">
               <%= @design.grade %>학년
             </div>
-            <div class="detail-fix">
-              <i class="fas fa-check" style="color:orange"></i>원본 파일 제공 <i class="fas fa-check" style="color:orange"></i>무료 수정 2회 제공<br>
-              <i class="fas fa-check" style="color:orange"></i>시안 개수 : 2개
+            <hr class="divider">
+            <div class="detail-fixcontent">
+              <i class="fas fa-check" style="color:orange"></i> 원본 파일 제공 <i class="fas fa-check" style="color:orange"></i> 무료 수정 2회 제공<br>
+              <i class="fas fa-check" style="color:orange"></i> 시안 개수 : 2개
             </div>
             <div class="detail-day">
               <i class="far fa-calendar-alt"></i> 작업일 : 2 ~ 3일
@@ -75,25 +73,9 @@
             디자인정보 – 디자인내역 – 가격 – 기간<br>
             로고디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
             명함디자인 – 명함디자인 2종 – 40,000원 – 2~3일<br>
-            PPT디자인 – PPT디자인(인포그래픽) - 장당 5,000원 – 2~3일<br>
+            PPT디자인 – PPT디자인 - 장당 5,000원 – 2~3일<br>
             현수막디자인 – 현수막디자인 – 30,000원 – 2~3일<br>
             포스터디자인 – 포스터디자인(A2, A4) - 2~3일<br>
-            <br>가격정보<br>
-            촬영소스 – 1. 30분 미만<br>
-            편집 : 1분 내외 -> 5만 원<br>
-            &emsp;3분 미만 -> 7만 원<br>
-            &emsp;3~5분 -> 12만 원<br>
-            &emsp;5분 ~ 10분 -> 15만 원<br>
-            <br>
-            촬영소스 – 30분 ~ 1시간 미만<br>
-            편집 : 1분 내외 -> 7만원<br>
-            &emsp;3분 미만 -> 10만원<br>
-            &emsp;3~ 5분 -> 15만원<br>
-            &emsp;5분~10분 -> 20만원<br>
-            <br>
-            들어가는 요소<br>
-            - 자막삽입 – 배경음악<br>
-            - 색 보정  = 로고삽입</p>
           </div>
           
           <div class="hide detail-fix">
@@ -118,13 +100,15 @@
     <div class="row">
       <div class="col-7">
         <div class="detail-content">
+          <hr>
           <%= @design.content %>
+          <hr>
         </div>
         <div class="postfolio">
           <% @design_attachments.each do |p| %>
             <div class="portfolio-each">
               <a href="<%= p.portfolio_url %>" >
-                <img src="<%= p.portfolio_url %>"><br>
+                <img src="<%= p.portfolio_url %>" width=200 height=200 /><br>
               </a>
             </div>
             <!--<?%= link_to "Edit Attachment", _path(p) %>-->

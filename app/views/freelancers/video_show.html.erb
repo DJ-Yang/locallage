@@ -23,7 +23,7 @@
         
         <div class="detail-status">
           <div class="status-1">
-            LOGO video &emsp;<i class="fas fa-angle-down"></i>
+            LOGO VIDEO &emsp;<i class="fas fa-angle-down"></i>
           </div>
           <div class="status-2">
             <div class="detail-university">
@@ -32,7 +32,7 @@
             <div class="detail-grade">
               <%= @video.grade %>학년
             </div>
-            <div class="detial-name">
+            <div class="detail-name">
               <%= @video.name %>
             </div>
             <hr class="divider">
@@ -68,9 +68,12 @@
       <div class="col-3"></div>
     </div>
     
+    <!-- 가격, 수정사항, 환불 규정-->
     <div class="row">
       <div class="col-7">
         <div class="detail-information-content">
+          
+          <!-- 가격 -->
           <div class="hide detail-price">
             <table class="table">
               <thead>
@@ -137,17 +140,32 @@
     
     <div class="row">
       <div class="col-7">
+        <!-- 상세설명 -->
         <div class="detail-content">
           <hr>
           <%= h(@video.content).gsub(/\n/, '<br/>').html_safe %>
           <hr>
         </div>
+        <!-- 유튜브 영상 삽입-->
+        <div>
+          <iframe width="700" height="500"
+            src="<%= @video.video_url %>" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+        
+        <!-- 포트폴리오 -->
         <div class="postfolio">
           <% @video_attachments.each do |p| %>
             <div class="portfolio-each">
-              <a href="<%= p.portfolio_url %>" >
-                <img src="<%= p.portfolio_url %>" width=600 /><br>
-              </a>
+              <% if p.portfolio_url.split('.')[-1] == ('mp4' or 'avi' or 'wmv') %>
+                <video width="500" height="500" controls>
+                  <source src="<%= p.portfolio_url %>">
+                </video>
+              <% else %>
+                <a href="<%= p.portfolio_url %>" >
+                  <img src="<%= p.portfolio_url %>" width=600 /><br>
+                </a>
+              <% end %>
             </div>
             <!--<?%= link_to "Edit Attachment", _path(p) %>-->
           <% end %>

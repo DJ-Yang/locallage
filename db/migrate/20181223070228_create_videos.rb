@@ -6,6 +6,7 @@ class CreateVideos < ActiveRecord::Migration[5.0]
       t.string :university
       t.string :grade
       t.string :name
+      t.string :video_url
       t.text :content
       t.integer :user_id
 

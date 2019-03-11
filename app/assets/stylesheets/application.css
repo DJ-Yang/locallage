@@ -165,6 +165,7 @@ html, body {
 .product-list {
   margin-top: 30px;
   border: solid 2px;
+  border-color: rgb(196, 195, 195);
 }
 
 .product-list a {
@@ -183,9 +184,12 @@ html, body {
 
 .product-content {
   padding-top: 30px;
-  border: solid 2px;
   height: 100%;
   padding-left: -15px;
+}
+
+.product-content p {
+  font-family: 'Do Hyeon', sans-serif;
 }
 
 .index-image {
@@ -200,18 +204,21 @@ html, body {
 }
 
 .index-university {
-  font-size: 25px;
-  border: solid 2px;
+  font-size: 30px;
+
 }
 
 .index-grade {
-  font-size: 25px;
-  border: solid 2px;
+  font-size: 30px;
+}
+
+.index-name {
+  font-size: 30px;
 }
 
 .index-title {
-  font-size: 25px;
-  border: solid 2px;
+  font-size: 30px;
+  /*border: solid 2px;*/
   padding-top: 15px;
   padding-bottom: 20px;
 }
@@ -229,6 +236,7 @@ html, body {
 .detail {
   min-height: 100%;
   margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 .detail-image {
@@ -239,14 +247,16 @@ html, body {
   position: fixed;
   margin-left: 30px;
   width: 320px;
+  margin-top: 30px;
 }
 
 .status-1 {
   border: solid 2px;
-  border-color: grey;
+  border-color: rgb(196, 195, 195);
   padding: 10px 0px 10px 10px;
   font-size: 30px;
   font-family: 'Do Hyeon', sans-serif;
+  text-align: center;
 }
 
 .status-2 {
@@ -269,6 +279,12 @@ hr.divider {
 }
 
 .detail-grade {
+  font-size: 20px;
+  display: inline;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.detail-name {
   font-size: 20px;
   display: inline;
   font-family: 'Do Hyeon', sans-serif;
@@ -313,7 +329,7 @@ hr.divider {
 .detail-information1 {
   border: solid 1px;
   border-color: grey;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px 0px 10px 0px;
 }
@@ -321,7 +337,7 @@ hr.divider {
 .detail-information2 {
   border: solid 1px;
   border-color: grey;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px 0px 10px 0px;
 }
@@ -329,7 +345,7 @@ hr.divider {
 .detail-information3 {
   border: solid 1px;
   border-color: grey;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px 0px 10px 0px;
 }

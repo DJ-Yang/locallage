@@ -23,7 +23,7 @@
         
         <div class="detail-status">
           <div class="status-1">
-            LOGO DESIGN &emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
+            LOGO DESIGN &emsp;<i class="fas fa-angle-down"></i>
           </div>
           <div class="status-2">
             <div class="detail-university">
@@ -31,6 +31,9 @@
             </div>
             <div class="detail-grade">
               <%= @design.grade %>학년
+            </div>
+            <div class="detail-name">
+              <%= @design.name %>
             </div>
             <hr class="divider">
             <div class="detail-fixcontent">
@@ -69,13 +72,48 @@
       <div class="col-7">
         <div class="detail-information-content">
           <div class="hide detail-price">
-            <p> 가격정보<br>
-            디자인정보 – 디자인내역 – 가격 – 기간<br>
-            로고디자인 – 텍스트형2종 + 심볼형1종 – 100,000원 – 2~3일<br>
-            명함디자인 – 명함디자인 2종 – 40,000원 – 2~3일<br>
-            PPT디자인 – PPT디자인 - 장당 5,000원 – 2~3일<br>
-            현수막디자인 – 현수막디자인 – 30,000원 – 2~3일<br>
-            포스터디자인 – 포스터디자인(A2, A4) - 2~3일<br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">디자인정보</th>
+                  <th scope="col">디자인내역</th>
+                  <th scope="col">가격</th>
+                  <th scope="col">기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>로고디자인</td>
+                  <td>텍스트형2종 + 심볼형1종</td>
+                  <td>100,000원</td>
+                  <td>2~3일</td>
+                </tr>
+                <tr>
+                  <td>명함디자인</td>
+                  <td>명함디자인 2종</td>
+                  <td>40,000원</td>
+                  <td>2~3일</td>
+                </tr>
+                <tr>
+                  <td>PPT디자인</td>
+                  <td>PPT디자인</td>
+                  <td>장당 5,000원</td>
+                  <td>2~3일</td>
+                </tr>
+                <tr>
+                  <td>현수막디자인</td>
+                  <td>현수막디자인</td>
+                  <td>30,000원</td>
+                  <td>2~3일</td>
+                </tr>
+                <tr>
+                  <td>포스터디자인</td>
+                  <td>포스터디자인(A2, A4)</td>
+                  <td>80,000원</td>
+                  <td>2~3일</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           
           <div class="hide detail-fix">
@@ -101,14 +139,14 @@
       <div class="col-7">
         <div class="detail-content">
           <hr>
-          <%= @design.content %>
+          <%= h(@design.content).gsub(/\n/, '<br/>').html_safe %>
           <hr>
         </div>
         <div class="postfolio">
           <% @design_attachments.each do |p| %>
             <div class="portfolio-each">
               <a href="<%= p.portfolio_url %>" >
-                <img src="<%= p.portfolio_url %>" width=200 height=200 /><br>
+                <img src="<%= p.portfolio_url %>" width=600 /><br>
               </a>
             </div>
             <!--<?%= link_to "Edit Attachment", _path(p) %>-->

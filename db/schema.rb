@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20190210114840) do
     t.string   "locallage"
     t.string   "university"
     t.string   "grade"
+    t.string   "name"
+    t.string   "video_url"
     t.text     "content"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -84,6 +86,7 @@ ActiveRecord::Schema.define(version: 20190210114840) do
     t.string   "locallage"
     t.string   "university"
     t.string   "grade"
+    t.string   "name"
     t.text     "content"
     t.integer  "user_id"
     t.datetime "created_at", null: false

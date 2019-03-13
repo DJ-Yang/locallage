@@ -193,7 +193,7 @@ class FreelancersController < ApplicationController
     
     @promotion.save
     
-    redirect_to promotion_path
+    redirect_to :back
   end
   
   def promotion_delete

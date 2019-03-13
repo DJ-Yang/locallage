@@ -27,6 +27,11 @@ Rails.application.routes.draw do
     patch 'design/show/:id/update' => 'freelancers#design_update'
     get 'design/show/:id/delete' => 'freelancers#design_destroy'
     
+    #홍보관련
+    get 'promotion' => 'freelancers#promotion'
+    post 'promotion/create' => 'freelancers#promotion_create'
+    get 'promotion/:id/delete' => 'freelancers#promotion_delete'
+    
     #로그인관련
     get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
     get 'logout', to: 'sessions#destroy', as: 'logout'

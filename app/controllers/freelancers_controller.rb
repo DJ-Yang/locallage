@@ -150,6 +150,21 @@ class FreelancersController < ApplicationController
   end
   
   
+  def promotion
+    @promotions = Promotion.all
+    
+    @promotion = Promotion.new
+  end
+  
+  def promotion_create
+    @promotion = Promotion.new(promotion_params)
+    
+    @promotion.save
+    
+    redirect_to promotion_path
+  end
+  
+  
   private
     def category_new
       params.require(:category).permit(:category)
@@ -169,6 +184,10 @@ class FreelancersController < ApplicationController
     
     def design_update_params
       params.require(:design).permit(:title, :university, :grade, :name, :content, :locallage, design_attachments_attributes: [:id, :design_id, :portfolio])
+    end
+    
+    def promotion_params
+      params.require(:promotion).permit(:title, :category, :blog)
     end
       
 end

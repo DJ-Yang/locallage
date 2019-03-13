@@ -1,0 +1,42 @@
+<div class="promotion">
+    <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">블로그이름</th>
+                        <th scope="col">분야</th>
+                        <th scope="col">링크</th>
+                    </tr>
+                </thead>
+                <% @promotions.each do |promotion| %>
+                    <tbody>
+                        <tr>
+                            <td><%= promotion.title %></td>
+                            <td><%= promotion.category %></td>
+                            <td><%= promotion.blog %></td>
+                        </tr>
+                    </tbody>
+                <% end %>
+            </table>
+    </div>
+</div>
+
+<div class="new-content">
+  <div class="container">
+    <%= form_for(@promotion, url:  promotion_create_path, method: :post) do |f| %>
+        
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+        
+        <%= f.label :blog %>
+        <%= f.text_field :blog %>
+
+     <div class="actions">
+       <%= f.submit %>
+     </div>
+    <% end %>
+  </div>
+</div>

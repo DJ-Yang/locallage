@@ -193,7 +193,7 @@
           <% @video_attachments.each do |p| %>
             <div class="portfolio-each">
               <% if p.portfolio_url.split('.')[-1] == ('mp4' or 'avi' or 'wmv') %>
-                <video width="500" height="500" controls>
+                <video  width="700" height="500" controls>
                   <source src="<%= p.portfolio_url %>">
                 </video>
               <% else %>

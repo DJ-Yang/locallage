@@ -9,7 +9,6 @@ class User < ApplicationRecord
   
   has_many :videos
   has_many :designs
-  has_many :promotions
   
   def self.find_or_create_from_auth_hash(auth)
   	where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|

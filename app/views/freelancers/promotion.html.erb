@@ -20,27 +20,28 @@
                 <% end %>
             </table>
     </div>
-</div>
-<% if !current_user.nil? %>
-    <% if current_user.has_role? :admin %>
-        <div class="new-content">
-          <div class="container">
-            <%= form_for(@promotion, url:  promotion_create_path, method: :post) do |f| %>
-                
-                <%= f.label :title %>
-                <%= f.text_field :title %>
-                
-                <%= f.label :category %>
-                <%= f.text_field :category %>
-                
-                <%= f.label :blog %>
-                <%= f.text_field :blog %>
-        
-             <div class="actions">
-               <%= f.submit %>
-             </div>
-            <% end %>
-          </div>
-        </div>
+    
+    <% if !current_user.nil? %>
+        <% if current_user.has_role? :admin %>
+            <div class="new-content">
+              <div class="container">
+                <%= form_for(@promotion, url:  promotion_create_path, method: :post) do |f| %>
+                    
+                    <%= f.label :title %>
+                    <%= f.text_field :title %>
+                    
+                    <%= f.label :category %>
+                    <%= f.text_field :category %>
+                    
+                    <%= f.label :blog %>
+                    <%= f.text_field :blog %>
+            
+                 <div class="actions">
+                   <%= f.submit %>
+                 </div>
+                <% end %>
+              </div>
+            </div>
+        <% end %>
     <% end %>
-<% end %>
+</div>

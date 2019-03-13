@@ -380,3 +380,11 @@ hr.divider {
 .portfolio-each {
   display: inline;
 }
+
+
+/* 홍보 파트 */
+.promotion {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}

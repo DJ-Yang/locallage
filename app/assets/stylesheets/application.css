@@ -27,6 +27,7 @@ html, body {
 }
 
 .logo_back {
+  width: 100%;
   background-color: black;
   padding: 10px 0px 10px 0px;
 }
@@ -50,6 +51,7 @@ html, body {
 }
 
 .bar {
+  width: 100%;
   background-color: orange;
   padding: 0px 0px 10px 0px;
 }

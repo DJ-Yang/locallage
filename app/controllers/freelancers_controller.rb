@@ -40,7 +40,15 @@ class FreelancersController < ApplicationController
   end
   
   def video_edit
-    @video = Video.find(params[:id])
+    if !user_signed_in?
+      flash[:alert] = "로그인이 필요합니다!"
+      redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "권한이 없습니다"
+      redirect_to :back
+    else
+      @video = Video.find(params[:id])
+    end
   end
   
   def video_create
@@ -72,18 +80,26 @@ class FreelancersController < ApplicationController
   end
   
   def video_destroy
-    @video = Video.find(params[:id])
-    
-    # @video.remove_locallage!      //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
-   
-    # @video.video_attachments.each do |attachment|
-    #   attachment.remove_portfolio!
-    # end
-    
-    @video.destroy
-    
-    respond_to do |format|
-      format.html { redirect_to action: "video", notice: 'Video was successfully destroyed.' }
+    if !user_signed_in?
+      flash[:alert] = "로그인이 필요합니다!"
+      redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "권한이 없습니다"
+      redirect_to :back
+    else
+      @video = Video.find(params[:id])
+      
+      # @video.remove_locallage!      //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
+     
+      # @video.video_attachments.each do |attachment|
+      #   attachment.remove_portfolio!
+      # end
+      
+      @video.destroy
+      
+      respond_to do |format|
+        format.html { redirect_to action: "video", notice: 'Video was successfully destroyed.' }
+      end
     end
   end
   
@@ -101,7 +117,15 @@ class FreelancersController < ApplicationController
   end
   
   def design_edit
-    @design = Design.find(params[:id])
+    if !user_signed_in?
+      flash[:alert] = "로그인이 필요합니다!"
+      redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "권한이 없습니다"
+      redirect_to :back
+    else
+      @design = Design.find(params[:id])
+    end
   end
   
   def design_create
@@ -134,18 +158,26 @@ class FreelancersController < ApplicationController
   end
   
   def design_destroy
-    @design = Design.find(params[:id])
-    
-    # @design.remove_locallage!     //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
-   
-    # @design.design_attachments.each do |attachment|
-    #   attachment.remove_portfolio!
-    # end
-    
-    @design.destroy
-    
-    respond_to do |format|
-      format.html { redirect_to action: "design", notice: 'Design was successfully destroyed.' }
+    if !user_signed_in?
+      flash[:alert] = "로그인이 필요합니다!"
+      redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "권한이 없습니다"
+      redirect_to :back
+    else
+      @design = Design.find(params[:id])
+      
+      # @design.remove_locallage!     //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
+     
+      # @design.design_attachments.each do |attachment|
+      #   attachment.remove_portfolio!
+      # end
+      
+      @design.destroy
+      
+      respond_to do |format|
+        format.html { redirect_to action: "design", notice: 'Design was successfully destroyed.' }
+      end
     end
   end
   
@@ -164,6 +196,20 @@ class FreelancersController < ApplicationController
     redirect_to promotion_path
   end
   
+  def promotion_delete
+    if !user_signed_in?
+      flash[:alert] = "로그인이 필요합니다!"
+      redirect_to new_user_session_path
+    elsif !current_user.has_role? :admin
+      flash[:alert] = "권한이 없습니다"
+      redirect_to :back
+    else
+      promotion = Promotion.find (params[:id])
+      promotion.destroy
+      
+      redirect_to :back
+    end
+  end
   
   private
     def category_new

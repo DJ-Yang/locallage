@@ -23,7 +23,7 @@
         
         <div class="detail-status">
           <div class="status-1">
-            LOGO VIDEO &emsp;<i class="fas fa-angle-down"></i>
+            VIDEO &emsp;&emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
           </div>
           <div class="status-2">
             <div class="detail-university">
@@ -37,15 +37,16 @@
             </div>
             <hr class="divider">
             <div class="detail-fixcontent">
-              <i class="fas fa-check" style="color:orange"></i> 원본 파일 제공 <i class="fas fa-check" style="color:orange"></i> 무료 수정 2회 제공<br>
-              <i class="fas fa-check" style="color:orange"></i> 시안 개수 : 2개
+              <i class="fas fa-check" style="color:orange"></i> 자막 삽입 &emsp;&emsp;<i class="fas fa-check" style="color:orange"></i> 배경음악<br>
+              <i class="fas fa-check" style="color:orange"></i> 색 보정 &emsp;&emsp;&nbsp;&nbsp;<i class="fas fa-check" style="color:orange"></i> 컷 편집<br>
+              <i class="fas fa-check" style="color:orange"></i> 로고 삽입
             </div>
             <div class="detail-day">
-              <i class="far fa-calendar-alt"></i> 작업일 : 2 ~ 3일
+              <i class="far fa-calendar-alt"></i> 상의 후 결정
             </div>
             
             <div class="detail-buy">
-              <a href="#"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
+              <a href="http://pf.kakao.com/_wEdxej/chat"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
             </div>
           </div>
           
@@ -72,65 +73,119 @@
     <div class="row">
       <div class="col-7">
         <div class="detail-information-content">
-          
-          <!-- 가격 -->
-          <div class="hide detail-price">
+          <div class="detail-price">
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">디자인정보</th>
-                  <th scope="col">디자인내역</th>
-                  <th scope="col">가격</th>
-                  <th scope="col">기간</th>
+                  <th scope="col">촬영 소스</th>
+                  <th scope="col">30분 미만</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>로고디자인</td>
-                  <td>텍스트형2종 + 심볼형1종</td>
-                  <td>100,000원</td>
-                  <td>2~3일</td>
+                  <td>1분 미만</td>
+                  <td>5만원</td>
                 </tr>
                 <tr>
-                  <td>명함디자인</td>
-                  <td>명함디자인 2종</td>
-                  <td>40,000원</td>
-                  <td>2~3일</td>
+                  <td>1분 ~ 3분 미만</td>
+                  <td>7만원</td>
                 </tr>
                 <tr>
-                  <td>PPT디자인</td>
-                  <td>PPT디자인</td>
-                  <td>장당 5,000원</td>
-                  <td>2~3일</td>
+                  <td>3분 ~ 5분 미만</td>
+                  <td>12만원</td>
                 </tr>
                 <tr>
-                  <td>현수막디자인</td>
-                  <td>현수막디자인</td>
-                  <td>30,000원</td>
-                  <td>2~3일</td>
-                </tr>
-                <tr>
-                  <td>포스터디자인</td>
-                  <td>포스터디자인(A2, A4)</td>
-                  <td>80,000원</td>
-                  <td>2~3일</td>
+                  <td>5분 ~ 10분 미만</td>
+                  <td>15만원</td>
                 </tr>
               </tbody>
             </table>
+            
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">촬영 소스</th>
+                  <th scope="col">30분 ~ 1시간 미만</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1분 미만</td>
+                  <td>7만원</td>
+                </tr>
+                <tr>
+                  <td>1분 ~ 3분 미만</td>
+                  <td>12만원</td>
+                </tr>
+                <tr>
+                  <td>3분 ~ 5분 미만</td>
+                  <td>15만원</td>
+                </tr>
+                <tr>
+                  <td>5분 ~ 10분 미만</td>
+                  <td>20만원</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>※ 1시간 이상의 촬영소스는 협의 후 가격 결정</p>
           </div>
           
           <div class="hide detail-fix">
-            <p> 기본 수정 규정<br>
-            1. 무료 수정 기본 2회 진행<br>
-            2. 2차 시안 이후 수정은 색상 및 크기변경, 위치변경 등 간단한 수정만 가능<br>
-            3. 1차 시안 이후 환불 60%, 2차 시안 이후 환불 불가</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th scope="col">기본 수정 규정</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>무료 수정 기본 1회 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>편집완료 이후 수정은 컷 편집, 추가자막 등 간단한 수정만 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>편집 완료 이후 환불 불가능합니다.</td>
+                </tr>
+              </tbody>
+            </table> 
           </div>
           
           <div class="hide detail-refund">
-            <p> 취소 및 환불 규정<br>
-            1. 전문가와 의뢰인 간의 상호 협의 후 청약철회가 가능<br>
-            2. 전문가의 귀책사유로 디자인 작업이 시작되지 않았거나 보편적 관점에서 심각하게 잘못 이행한 경우 결제 금액 전체 환불이 가능<br>
-            3. 전문가가 작업 기간 동안 지정된 서비스를 제공하지 못한 경우 지급받은 서비스 비용을 일할 계산하여 작업물 개수와 작업기간 일수만큼 공제하고 잔여 금액을 환불합니다</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th scope="col"> 취소 및 환불 규정</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>전문가와 의뢰인의 상호 협의하에 청약 철회 및 환불이 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>작업 착수 이후 청약 철회 시, 진행된 작업량 공제한 금액을 환불 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>편집 작업 50% 완료 후 청약 철회 : 총 결제 금액의 최대 10%까지 환불 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>작업 기간 미준수, 작업 태만 및 이에 상응하는 전문가 책임으로 인한 청약 철회 시, 환불 및 편집본 제공이 가능합니다.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>작업이 시작되면 단순 변심 또는 의뢰인 책임 사유로 인한 전액 환불이 불가능합니다.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

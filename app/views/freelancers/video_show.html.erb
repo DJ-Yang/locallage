@@ -79,54 +79,34 @@
                 <tr>
                   <th scope="col">촬영 소스</th>
                   <th scope="col">30분 미만</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1분 미만</td>
-                  <td>5만원</td>
-                </tr>
-                <tr>
-                  <td>1분 ~ 3분 미만</td>
-                  <td>7만원</td>
-                </tr>
-                <tr>
-                  <td>3분 ~ 5분 미만</td>
-                  <td>12만원</td>
-                </tr>
-                <tr>
-                  <td>5분 ~ 10분 미만</td>
-                  <td>15만원</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">촬영 소스</th>
                   <th scope="col">30분 ~ 1시간 미만</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1분 미만</td>
+                  <td>5만원</td>
                   <td>7만원</td>
                 </tr>
                 <tr>
                   <td>1분 ~ 3분 미만</td>
+                  <td>7만원</td>
                   <td>12만원</td>
                 </tr>
                 <tr>
                   <td>3분 ~ 5분 미만</td>
+                  <td>12만원</td>
                   <td>15만원</td>
                 </tr>
                 <tr>
                   <td>5분 ~ 10분 미만</td>
+                  <td>15만원</td>
                   <td>20만원</td>
                 </tr>
               </tbody>
+
             </table>
+            
             <p>※ 1시간 이상의 촬영소스는 협의 후 가격 결정</p>
           </div>
           
@@ -241,10 +221,12 @@
         case 1:
             $(".hide").removeClass("show");
             $(".detail-fix").addClass("show");
+            $(".detail-price").addClass("hide");
             break;
         case 2:
             $(".hide").removeClass("show");
             $(".detail-refund").addClass("show");
+            $(".detail-price").addClass("hide");
             break;
     }
   }

@@ -374,6 +374,10 @@ hr.divider {
   width: 100%;
 }
 
+.detail-price {
+  text-align: center;
+}
+
 .portfolio {
 }
 

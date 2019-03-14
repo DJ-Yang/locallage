@@ -183,9 +183,11 @@
         </div>
         <!-- 유튜브 영상 삽입-->
         <div>
+          <% if !@video.video_url.blank? %>
           <iframe width="700" height="500"
             src="<%= @video.video_url %>" frameborder="0" allowfullscreen>
           </iframe>
+          <% end %>
         </div>
         
         <!-- 포트폴리오 -->

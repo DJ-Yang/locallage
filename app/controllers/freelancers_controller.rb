@@ -72,8 +72,15 @@ class FreelancersController < ApplicationController
   def video_update
     @video = Video.find(params[:id])
     
+    @video.video_attachments.each do |attachment|
+      attachment.remove_portfolio!
+    end
+        
     respond_to do |format|
       if @video.update(video_update_params)
+        params[:video_attachments]['portfolio'].each do |a|
+          @video_attachment = @video.video_attachments.create!(:portfolio => a, :video_id => @video.id)
+        end
         format.html { redirect_to action: "video_show", id: @video.id, notice: 'Video was successfully updated.' }
       end
     end

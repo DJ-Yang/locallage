@@ -25,7 +25,8 @@ class LocallageUploader < CarrierWave::Uploader::Base
   
   
   def store_dir
-    "uploads/locallage"
+    "uploads/test"
+    # "uploads/locallage"
   end
   
   def filename

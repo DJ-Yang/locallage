@@ -174,6 +174,7 @@ html, body {
 .product-list a {
   width: 100%;
   display: inline;
+  text-decoration: none !important;
 }
 
 .product-list a:link {

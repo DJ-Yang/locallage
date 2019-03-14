@@ -72,8 +72,9 @@ class FreelancersController < ApplicationController
   def video_update
     @video = Video.find(params[:id])
     
-    @video.video_attachments.each do |attachment|
+    @video.video_attachments.all.each do |attachment|
       attachment.remove_portfolio!
+      attachment.destroy
     end
         
     respond_to do |format|

@@ -99,11 +99,11 @@ class FreelancersController < ApplicationController
     else
       @video = Video.find(params[:id])
       
-      # @video.remove_locallage!      //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
+      @video.remove_locallage!
      
-      # @video.video_attachments.each do |attachment|
-      #   attachment.remove_portfolio!
-      # end
+      @video.video_attachments.each do |attachment|
+        attachment.remove_portfolio!
+      end
       
       @video.destroy
       
@@ -177,11 +177,11 @@ class FreelancersController < ApplicationController
     else
       @design = Design.find(params[:id])
       
-      # @design.remove_locallage!     //다른글까지 삭제되서 일단 주석처리 했지만 나중에 데이터 낭비가 있을 수 있음 처리해야함
+      @design.remove_locallage!
      
-      # @design.design_attachments.each do |attachment|
-      #   attachment.remove_portfolio!
-      # end
+      @design.design_attachments.each do |attachment|
+        attachment.remove_portfolio!
+      end
       
       @design.destroy
       

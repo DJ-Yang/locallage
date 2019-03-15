@@ -2,8 +2,8 @@ class PortfolioUploader < CarrierWave::Uploader::Base
   storage :fog
 
   def store_dir
-    # "uploads/locallage"
-    "uploads/test"
+    "uploads/locallage"
+    # "uploads/test"
   end
   
   def filename

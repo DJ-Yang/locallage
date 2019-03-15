@@ -221,14 +221,17 @@ html, body {
 
 .index-university {
   font-size: 25px;
+  color: black;
 }
 
 .index-grade {
   font-size: 25px;
+  color: black;
 }
 
 .index-name {
   font-size: 25px;
+  color: black;
 }
 
 .index-title {
@@ -236,6 +239,7 @@ html, body {
   /*border: solid 2px;*/
   padding-top: 15px;
   padding-bottom: 20px;
+  color: rgb(102, 102, 102);
 }
 
 /* detail */

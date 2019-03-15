@@ -71,18 +71,20 @@ class FreelancersController < ApplicationController
   
   def video_update
     @video = Video.find(params[:id])
-    
-    @video.video_attachments.all.each do |attachment|
-      attachment.remove_portfolio!
-      attachment.destroy
-    end
         
     respond_to do |format|
       if @video.update(video_update_params)
-        params[:video_attachments]['portfolio'].each do |a|
-          @video_attachment = @video.video_attachments.create!(:portfolio => a, :video_id => @video.id)
-        end
-        format.html { redirect_to action: "video_show", id: @video.id, notice: 'Video was successfully updated.' }
+        # if !params[:video_attachments][:portfolio].exists?
+          # @video.video_attachments.all.each do |attachment|
+            # attachment.remove_portfolio!
+            # attachment.destroy
+          # end
+    
+          # params[:video_attachments]['portfolio'].each do |a|
+            # @video_attachment = @video.video_attachments.create!(:portfolio => a, :video_id => @video.id)
+          # end
+          format.html { redirect_to action: "video_show", id: @video.id, notice: 'Video was successfully updated.' }
+        # end
       end
     end
   end

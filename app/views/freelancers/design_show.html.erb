@@ -11,51 +11,11 @@
     
     <div class="row">
       
-      <div class="col-7 detail-image">
-        <img src="<%= @design.locallage.personal.url %>">
-      </div>
-      
-      <div class="col-3">
-        
-        <div class="detail-title">
-          <b><%= @design.title %></b>
-        </div>
-        
-        <div class="detail-status">
-          <div class="status-1">
-            DESIGN &emsp;&emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
-          </div>
-          <div class="status-2">
-            <div class="detail-university">
-              <%= @design.university %>대학교
-            </div>
-            <div class="detail-grade">
-              <%= @design.grade %>학년
-            </div>
-            <div class="detail-name">
-              <%= @design.name %>
-            </div>
-            <hr class="divider">
-            <div class="detail-fixcontent">
-              <i class="fas fa-check" style="color:orange"></i> 원본 파일 제공 <i class="fas fa-check" style="color:orange"></i> 무료 수정 2회 제공<br>
-              <i class="fas fa-check" style="color:orange"></i> 시안 개수 : 2개
-            </div>
-            <div class="detail-day">
-              <i class="far fa-calendar-alt"></i> 작업일 : 2 ~ 3일
-            </div>
-            
-            <div class="detail-buy">
-              <a href="http://pf.kakao.com/_wEdxej/chat"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      
       <div class="col-7">
+        <div class="detail-image">
+          <img src="<%= @design.locallage.personal.url %>">
+        </div>
+        
         <div class="detail-information">
           <div class="row">
             <div class="col detail-information1"><a onclick="mostrar(0);">가격정보</a></div>
@@ -63,13 +23,7 @@
             <div class="col detail-information3"><a onclick="mostrar(2);">취소 및 환불규정</a></div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-3"></div>
-    </div>
-    
-    <div class="row">
-      <div class="col-7">
+        
         <div class="detail-information-content">
           <div class="detail-price">
             <table class="table">
@@ -166,13 +120,7 @@
             </table>
           </div>
         </div>
-      </div>
-      <div class="col-3"></div>
-    </div>
-    
-    
-    <div class="row">
-      <div class="col-7">
+        
         <div class="detail-content">
           <hr>
           <%= h(@design.content).gsub(/\n/, '<br/>').html_safe %>
@@ -189,7 +137,43 @@
           <% end %>
         </div>
       </div>
-      <div class="col-3"></div>
+      
+      <div class="col-3">
+        
+        <div class="detail-title">
+          <b><%= @design.title %></b>
+        </div>
+        
+        <div class="detail-status">
+          <div class="status-1">
+            DESIGN &emsp;&emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
+          </div>
+          <div class="status-2">
+            <div class="detail-university">
+              <%= @design.university %>대학교
+            </div>
+            <div class="detail-grade">
+              <%= @design.grade %>학년
+            </div>
+            <div class="detail-name">
+              <%= @design.name %>
+            </div>
+            <hr class="divider">
+            <div class="detail-fixcontent">
+              <i class="fas fa-check" style="color:orange"></i> 원본 파일 제공 <i class="fas fa-check" style="color:orange"></i> 무료 수정 2회 제공<br>
+              <i class="fas fa-check" style="color:orange"></i> 시안 개수 : 2개
+            </div>
+            <div class="detail-day">
+              <i class="far fa-calendar-alt"></i> 작업일 : 2 ~ 3일
+            </div>
+            
+            <div class="detail-buy">
+              <a href="http://pf.kakao.com/_wEdxej/chat"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
   </div>
 </div>

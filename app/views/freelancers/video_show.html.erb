@@ -1,7 +1,7 @@
 <div class="detail">
   <div class="container">
     
-    
+    <!-- 어드민 수정/삭제 기능 버튼 -->
     <% if !current_user.nil? %>
       <% if ((current_user.id == @video.user_id) || (current_user.has_role? :admin)) %>
         <a href="../<%= @video.id %>/edit">수정</a>
@@ -12,10 +12,13 @@
     <div class="row">
       
       <div class="col-7">
+        
+        <!-- 개인 페이지의 이미지 -->
         <div class="detail-image">
           <img src="<%= @video.locallage.personal.url %>">
         </div>
         
+        <!-- 가격, 수정사항, 환불 규정-->
         <div class="detail-information">
           <div class="row">
             <div class="col detail-information1"><a onclick="mostrar(0);">가격정보</a></div>
@@ -24,7 +27,7 @@
           </div>
         </div>
     
-        <!-- 가격, 수정사항, 환불 규정-->
+        <!-- 가격, 수정사항, 환불 규정 세부사항-->
         <div class="detail-information-content">
           <div class="detail-price">
             <table class="table">
@@ -132,7 +135,8 @@
         <div>
           <% if !@video.video_url.blank? %>
           <iframe width="700" height="500"
-            src="<%= @video.video_url %>" frameborder="0" allowfullscreen>
+            src="https://www.youtube.com/embed/<%= @video.video_url.split('/')[-1] %>" frameborder="0" allowfullscreen>
+            <!--src="<%= @video.video_url %>" frameborder="0" allowfullscreen>-->
           </iframe>
           <% end %>
         </div>
@@ -158,10 +162,14 @@
       
       <div class="col-3">
         
+        <!-- 개인페이지 상태바 -->
+        
+        <!-- 개인페이지 제목 -->
         <div class="detail-title">
           <b><%= @video.title %></b>
         </div>
         
+        <!-- 개인페이지 상태바 세부 -->
         <div class="detail-status">
           <div class="status-1">
             VIDEO &emsp;&emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
@@ -198,6 +206,7 @@
 </div>
 
 <script>
+  /* 수정, 가격 및 환불 설명창 변경 스크립트*/
   function mostrar(order) {
     switch (order) {
         case 0:

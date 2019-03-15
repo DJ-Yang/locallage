@@ -115,10 +115,6 @@ class FreelancersController < ApplicationController
   
   def design
     @designs = Design.all
-    # @designs.each do |design|
-    #   @image = MiniMagick::Image.open(design.locallage.url)
-    #   @image.resize = "250x250"
-    # end
   end
   
   def design_new

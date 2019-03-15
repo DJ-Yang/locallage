@@ -1,7 +1,7 @@
 <div class="detail">
   <div class="container">
     
-    
+    <!-- 어드민 수정/삭제 기능 버튼 -->
     <% if !current_user.nil? %>
       <% if ((current_user.id == @design.user_id) || (current_user.has_role? :admin)) %>
         <a href="../<%= @design.id %>/edit">수정</a>
@@ -12,10 +12,13 @@
     <div class="row">
       
       <div class="col-7">
+        
+        <!-- 개인 페이지의 이미지 -->
         <div class="detail-image">
           <img src="<%= @design.locallage.personal.url %>">
         </div>
         
+        <!-- 가격, 수정사항, 환불 규정-->
         <div class="detail-information">
           <div class="row">
             <div class="col detail-information1"><a onclick="mostrar(0);">가격정보</a></div>
@@ -24,6 +27,7 @@
           </div>
         </div>
         
+        <!-- 가격, 수정사항, 환불 규정 세부사항-->
         <div class="detail-information-content">
           <div class="detail-price">
             <table class="table">
@@ -121,11 +125,14 @@
           </div>
         </div>
         
+        <!-- 상세설명 -->
         <div class="detail-content">
           <hr>
           <%= h(@design.content).gsub(/\n/, '<br/>').html_safe %>
           <hr>
         </div>
+        
+        <!-- 포트폴리오 -->
         <div class="postfolio">
           <% @design_attachments.each do |p| %>
             <div class="portfolio-each">
@@ -140,10 +147,14 @@
       
       <div class="col-3">
         
+        <!-- 개인페이지 상태바 -->
+        
+        <!-- 개인페이지 제목 -->
         <div class="detail-title">
           <b><%= @design.title %></b>
         </div>
         
+        <!-- 개인페이지 상태바 세부 -->
         <div class="detail-status">
           <div class="status-1">
             DESIGN &emsp;&emsp;&emsp;&emsp;<i class="fas fa-angle-down"></i>
@@ -179,6 +190,7 @@
 </div>
 
 <script>
+  /* 수정, 가격 및 환불 설명창 변경 스크립트*/
   function mostrar(order) {
     switch (order) {
         case 0:

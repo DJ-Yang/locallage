@@ -156,13 +156,13 @@ class FreelancersController < ApplicationController
     
     respond_to do |format|
       if @design.update(design_update_params)
-        @video.design_attachments.all.each do |attachment|
+        @design.design_attachments.all.each do |attachment|
           attachment.remove_portfolio!
           attachment.destroy
         end
   
         params[:design_attachments]['portfolio'].each do |a|
-          @design_attachment = @design.video_attachments.create!(:portfolio => a, :design_id => @design.id)
+          @design_attachment = @design.design_attachments.create!(:portfolio => a, :design_id => @design.id)
         end
         format.html { redirect_to action: "design_show", id: @design.id, notice: 'Design was successfully updated.' }
       end

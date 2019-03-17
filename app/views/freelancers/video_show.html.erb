@@ -135,8 +135,8 @@
         <div>
           <% if !@video.video_url.blank? %>
           <iframe width="700" height="500"
-            src="https://www.youtube.com/embed/<%= @video.video_url.split('/')[-1] %>" frameborder="0" allowfullscreen>
-            <!--src="<%= @video.video_url %>" frameborder="0" allowfullscreen>-->
+            <!--src="https://www.youtube.com/embed/<%= @video.video_url.split('/')[-1] %>" frameborder="0" allowfullscreen>-->
+            src="<%= @video.video_url %>" frameborder="0" allowfullscreen>
           </iframe>
           <% end %>
         </div>
@@ -150,9 +150,7 @@
                   <source src="<%= p.portfolio_url %>">
                 </video>
               <% else %>
-                <a href="<%= p.portfolio_url %>" >
                   <img src="<%= p.portfolio_url %>" width=600 /><br>
-                </a>
               <% end %>
             </div>
             <!--<?%= link_to "Edit Attachment", _path(p) %>-->
@@ -195,7 +193,7 @@
             </div>
             
             <div class="detail-buy">
-              <a href="http://pf.kakao.com/_wEdxej/chat"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
+              <a href="http://pf.kakao.com/_wEdxej/chat" target="_blank"><img src="<%= asset_path( 'matching.jpg' ) %>" /></a>
             </div>
           </div>
           

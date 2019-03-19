@@ -98,11 +98,17 @@ html, body {
 
 .footer-col p {
   padding-top: 10px;
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  /*font-family: 'Do Hyeon', sans-serif;*/
 }
 
 .footer-col a {
   color: black;
+}
+
+.footer-col a:hover {
+  color: black;
+  background-color: rgb(238, 238, 238);
 }
 
 .footer-title {

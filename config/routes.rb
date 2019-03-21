@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root 'freelancers#index'
 
     #메인페이지
+    get 'index' => 'freelancers#index'
     get 'new' => 'freelancers#new'
     post 'category' => 'freelancers#category'
     get 'ready' => 'freelancers#ready'

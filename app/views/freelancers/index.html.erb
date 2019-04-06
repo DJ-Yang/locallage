@@ -1,5 +1,58 @@
 <div class='main'>
     <div class='container'>
-        <img src="<%= asset_path( 'mainpage.png' ) %>" />
+        <div class='main-title'>
+                <h1><b>로컬리지 <span class='main-title-focus'>소개</span></b></h1>
+        </div>
+        <div class='main-image'>
+            <img src="<%= asset_path( 'mainpage.png' ) %>" />
+            <!--<div class='main-image-text'>-->
+            <!--    <div class='row'>-->
+            <!--        <div class='col'>-->
+            <!--            스타트업-->
+            <!--        </div>-->
+            <!--        <div class='col'>-->
+            <!--            로컬리지-->
+            <!--        </div>-->
+            <!--        <div class='col'>-->
+            <!--            대학생-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+        </div>
+        <div class='main-text'>
+            <p class='main-content'><b>지역기반 외주 플랫폼 로컬리지는 지역 스타트업의 과업을 지역민 or<br><br><br> 지역 대학생을 통해서 해결할 뿐만 아니라 1회사, 1프리랜서 고용을 지원해 드립니다.</b></p>
+        </div>
+    
+        <div class='proccess'>
+            <div class='proccess-title'>
+                <h2><b>로컬리지는 <span class='proccess-title-focus'>이런 점</span> 이 달라요!</b></h2>
+            </div>
+            <div class='proccess-content'>
+                <div class='row'>
+                    <div class='col'>
+                        <img src="<%= asset_path( 'copywrite.jpg' ) %>" width=350 heigh=350 /><br>
+                        <h5><b>1. 프리랜서 저작권 교육</b></h5>
+                        <p>글씨, 사진 등의 저작권 교육 진행</p>
+                    </div>
+                    <div class='col'>
+                        <img src="<%= asset_path( 'insincere.jpg' ) %>" width=330 heigh=350 /><br>
+                        <h5><b>2. 불성실한 프리랜서 퇴출</b></h5>
+                        <p>3번 작업기한, 월 문제 시 프리랜서 퇴출</p>
+                    </div>
+                    <div class='col'>
+                        <img src="<%= asset_path( 'afterservice.jpg' ) %>" width=350 heigh=350 /><br>
+                        <h5><b>3. A/S 사후 관리</b></h5>
+                        <p>작업기한 내 완료 불가 시 로컬리지에서 작업 진행</p>
+                    </div>
+                </div>
+            </div>
+            <div class='proccess2'>
+                <div class='proccess2-title'>
+                    <h1><b>PR<span class='proccess2-title-focus'>O</span>CCESS</b></h1>
+                </div>
+                
+                <img src="<%= asset_path( 'proccess.png' ) %>" />
+            </div>
+        </div>
     </div>
 </div>

@@ -139,10 +139,87 @@ html, body {
   margin-bottom: -100px;
 }
 
-.main .container {
+.main .main-title {
+  font-family: 'Nanum Gothic Coding', monospace;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.main .main-title-focus {
+  color: orange;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 60px;
+}
+
+.main .main-image {
+  margin-top: 110px;
   width: 100%;
-  margin-top: 80px;
-  background-color: rgb(242, 230, 211);
+  text-align: center;
+}
+
+/*.main .main-image-text {*/
+/*  width: 800px;*/
+/*  text-align: center;*/
+/*  margin-left: 170px;*/
+/*}*/
+
+.main .main-text {
+  margin-top: 70px;
+}
+
+.main .main-content {
+  text-align: center;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 20px;
+}
+
+.main .proccess {
+  padding-top: 150px;
+  margin-bottom: 120px;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.main .proccess-title {
+  text-align: center;
+}
+
+.main .proccess-content {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.main .proccess-content .colg {
+  text-align: center;
+}
+
+.main .proccess-content img {
+  margin-bottom: 20px;
+}
+
+.main .proccess-title-focus {
+  color: orange;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 55px;
+}
+
+.main .proccess2 {
+  text-align: center;
+  padding: 130px 0px 130px 0px;
+}
+
+.main .proccess2-title {
+  padding-bottom: 80px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 70px;
+}
+
+.main .proccess2-title-focus {
+  color: orange;
+}
+
+.main p {
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .category {

@@ -157,11 +157,29 @@ html, body {
   text-align: center;
 }
 
-/*.main .main-image-text {*/
-/*  width: 800px;*/
-/*  text-align: center;*/
-/*  margin-left: 170px;*/
-/*}*/
+.main .main-image-text {
+  width: 880px;
+  text-align: center;
+  margin-left: 135px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 35px;
+}
+
+.main .main-iamge-text .col {
+  padding: 0px;  
+}
+
+.main .main-image-text .text1 {
+  padding: 0px;  
+}
+
+.main .main-image-text .text2 {
+  padding: 0px;
+}
+
+.main .main-image-text .text3 {
+  padding: 0px;
+}
 
 .main .main-text {
   margin-top: 70px;

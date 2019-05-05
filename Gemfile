@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'mysql2'
 # 보안을 위한 젬
 gem 'figaro'
 # 권한 부여를 위한 젬
